@@ -3,11 +3,49 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --color1: hsl(261, 100%, 50%);
+  /* --color1: hsl(261, 100%, 77%); */
+  --color2: antiquewhite;
+  /* --color2: hsl(34, 100%, 29%); */
+  --backrgoundColor: aliceblue;
+  /* --backrgoundColor: hsl(208, 100%, 7%); */
+  --textColor: rgb(7, 7, 7);
+  /* --textColor: rgb(255, 242, 242); */
+  --textColor1: gray;
+  /* --textColor1: rgb(185, 173, 173); */
+}
+#theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 24px;
+  border: 1px solid var(--color1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+.switch {
+  width: 20px;
+  height: 20px;
+  margin: 1px;
+  border-radius: 50%;
+  background-color: var(--color1);
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.night {
+  left: 76px;
+}
+
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background-color: aliceblue;
+  background-color: var(--backrgoundColor);
+  color: var(--textColor);
 }
 img {
   width: 100%;
@@ -23,7 +61,7 @@ img {
 .wikiLogo {
   width: 200px;
   height: 200px;
-  filter: drop-shadow(5px 3px 8px rgb(150, 94, 255));
+  filter: drop-shadow(5px 3px 8px var(--color1));
 }
 .container {
   display: flex;
@@ -38,8 +76,8 @@ img {
 form {
   border: 1px solid black;
   border-radius: 20px;
-  background-color: antiquewhite;
-  box-shadow: 2px 2px 5px black;
+  background-color: var(--color2);
+  box-shadow: 2px 2px 5px var(--textColor);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,7 +113,7 @@ form {
   font-size: 1.1rem;
 }
 .form-input:focus {
-  filter: drop-shadow(0px 0px 8px rgb(150, 94, 255));
+  filter: drop-shadow(0px 0px 8px var(--color1));
   background-color: aliceblue;
   outline: none;
 }
@@ -84,7 +122,7 @@ form {
   width: 2.5rem;
   padding: 5px;
   border: 2px solid rgb(0, 0, 0);
-  background-color: rgb(150, 94, 255);
+  background-color: var(--color1);
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
 }
@@ -104,7 +142,7 @@ form {
   -webkit-appearance: none;
   width: 100px;
   height: 25px;
-  background: rgb(150, 94, 255);
+  background: var(--color1);
   border-radius: 20px;
   outline: none;
   opacity: 0.7;
@@ -145,9 +183,9 @@ form {
   min-width: 320px;
   width: 30%;
   display: block;
-  background: antiquewhite;
-  box-shadow: 2px 2px 5px black;
-  color: black;
+  background: var(--color2);
+  box-shadow: 2px 2px 5px var(--textColor);
+  color: var(--textColor);
   padding: 2rem 3rem;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
@@ -157,7 +195,7 @@ form {
   margin-bottom: 0.5rem;
 }
 .articles p {
-  color: gray;
+  color: var(--textColor1);
   transition: all 0.5s ease-in-out;
 }
 .articles a:hover {

@@ -5,6 +5,8 @@ const form = document.querySelector(".form");
 const input = document.querySelector(".form-input");
 const results = document.querySelector(".results");
 const numberOfPages = document.querySelector("#numberOfPages");
+const themeSwitch = document.querySelector(".switch");
+const theme = document.querySelector("#theme");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -16,6 +18,44 @@ form.addEventListener("submit", (e) => {
     return;
   }
   getPages(value);
+});
+
+themeSwitch.addEventListener("click", (e) => {
+  themeSwitch.classList.toggle("night");
+  if (themeSwitch.classList.contains("night")) {
+    document.documentElement.style.setProperty(
+      "--color1",
+      " hsl(261, 100%, 70%)"
+    );
+    document.documentElement.style.setProperty(
+      "--color2",
+      "hsl(34, 100%, 29%)"
+    );
+    document.documentElement.style.setProperty(
+      "--backrgoundColor",
+      " hsl(208, 100%, 7%)"
+    );
+    document.documentElement.style.setProperty(
+      "--textColor",
+      " rgb(255, 242, 242)"
+    );
+    document.documentElement.style.setProperty(
+      "--textColor1",
+      " rgb(185, 173, 173);"
+    );
+  } else {
+    document.documentElement.style.setProperty(
+      "--color1",
+      " hsl(261, 100%, 50%)"
+    );
+    document.documentElement.style.setProperty("--color2", " antiquewhite");
+    document.documentElement.style.setProperty(
+      "--backrgoundColor",
+      "  aliceblue"
+    );
+    document.documentElement.style.setProperty("--textColor", "  rgb(7, 7, 7)");
+    document.documentElement.style.setProperty("--textColor1", " gray");
+  }
 });
 
 const getPages = async (searchValue) => {
