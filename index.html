@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="shortcut icon"
+      href="/images/wiki-logo.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./index.js" defer type="module"></script>
+    <title>Wikipedia search</title>
+  </head>
+
+  <body>
+    <section class="wiki">
+      <div class="container">
+        <img src="./images/wiki-logo.png" alt="logo" class="wikiLogo" />
+        <h3>Wikipedia Search</h3>
+        <form class="form">
+          <div class="searchInput">
+            <input type="text" class="form-input" />
+            <button type="submit" class="submit-btn">
+              <img src="./images/search-outline.svg" alt="" />
+            </button>
+          </div>
+          <div class="numberOfPages">
+            <label for="numberOfPages" id="labelForPageNumber"
+              >Show number of pages from 1 to 50
+            </label>
+            <div class="inputOutput">
+              <input
+                type="range"
+                min="1"
+                max="50"
+                value="25"
+                id="numberOfPages"
+                oninput="amount.value=numberOfPages.value"
+              />
+              <output id="amount" name="amount" for="numberOfPages">25</output>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- results -->
+      <div class="results"></div>
+    </section>
+  </body>
+</html>

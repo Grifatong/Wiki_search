@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: aliceblue;
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.wiki {
+  padding: 3rem 0;
+  width: 90vw;
+  margin: 0 auto;
+}
+.wikiLogo {
+  width: 200px;
+  height: 200px;
+  filter: drop-shadow(5px 3px 8px rgb(150, 94, 255));
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container h3 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+form {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: antiquewhite;
+  box-shadow: 2px 2px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  margin-bottom: 2rem;
+}
+.searchInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.numberOfPages {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.numberOfPages input {
+  margin-right: 0.3rem;
+  margin-left: 1rem;
+}
+.form-input {
+  padding: 2px 10px;
+  margin-right: 1rem;
+  height: 2rem;
+  background-color: rgb(240, 240, 240);
+  border: 2px solid black;
+  box-shadow: inset 2px 1px 4px rgb(70, 70, 70);
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+.form-input:focus {
+  filter: drop-shadow(0px 0px 8px rgb(150, 94, 255));
+  background-color: aliceblue;
+  outline: none;
+}
+.submit-btn {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 5px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(150, 94, 255);
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.submit-btn:hover {
+  background-color: hsl(261, 100%, 88%);
+  scale: 1.06;
+  cursor: pointer;
+}
+.inputOutput {
+  display: flex;
+  align-items: center;
+}
+.inputOutput input {
+  margin-right: 0.8rem;
+}
+#numberOfPages {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 25px;
+  background: rgb(150, 94, 255);
+  border-radius: 20px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+#numberOfPages:hover {
+  opacity: 1;
+}
+#numberOfPages::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  background: hsl(34, 78%, 60%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#numberOfPages::-moz-range-thumb {
+  width: 32px;
+  height: 32px;
+  background: hsl(34, 78%, 60%);
+  cursor: pointer;
+}
+.error {
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(158, 0, 0);
+}
+.articles {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.articles a {
+  text-decoration: none;
+  min-width: 320px;
+  width: 30%;
+  display: block;
+  background: antiquewhite;
+  box-shadow: 2px 2px 5px black;
+  color: black;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.articles h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.articles p {
+  color: gray;
+  transition: all 0.5s ease-in-out;
+}
+.articles a:hover {
+  background: rgb(54, 54, 54);
+  color: white;
+}
+/* loader */
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 10px solid antiquewhite;
+  border-radius: 50%;
+  border-top-color: rgb(144, 58, 255);
+  border-bottom-color: rgb(144, 58, 255);
+  animation: spinner 0.8s linear infinite;
+}
+.loading {
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
